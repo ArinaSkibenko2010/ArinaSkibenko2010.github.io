@@ -86,7 +86,7 @@
  .team img{
    border: 5px solid #343a40;
  }
- .des{
+ .des, .contact{
    background: #343a40;
    color: white;
    padding: 10px;
@@ -101,4 +101,8 @@
  .des span{
    color: lightgray;
    font-size: 0.85em;
+ }
+ .contact{
+  padding-bottom: 4em;
+  padding-top: 4em;
  }

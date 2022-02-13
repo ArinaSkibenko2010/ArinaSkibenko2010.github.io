@@ -27,16 +27,22 @@
  <div class="collapse navbar-collapse" id="navbarContent">
    <ul class="navbar-nav">
      <li class="nav-item">
-      <a href="#" class="nav-link">About</a>
+      <a data-value="about" href="#" class="nav-link">About us</a>
      </li>
       <li class="nav-item">
-      <a href="#" class="nav-link">About</a>
+      <a data-value="cars" href="#" class="nav-link">Our cars</a>
      </li>
       <li class="nav-item">
-      <a href="#" class="nav-link">About</a>
+      <a data-value="tradeIn" href="#" class="nav-link">Trade in</a>
      </li>
       <li class="nav-item">
-      <a href="#" class="nav-link">About</a>
+      <a data-value="proucts" href="#" class="nav-link">Our Proucts</a>
+     </li>
+     <li class="nav-item">
+      <a data-value="team" href="#" class="nav-link">Our Managers</a>
+     </li>
+     <li class="nav-item">
+      <a data-value="contacs" href="#" class="nav-link">Contacs</a>
      </li>
    </ul>
  </div>
@@ -51,7 +57,7 @@
   </div>
 </div>
 </header>
-<div class="info">
+<div class="info" id="about">
   <h1 class="text-center">About us</h1>
   <div class="container">
     <div class="row">
@@ -75,7 +81,7 @@
   </div>
 </div>
 
-<div class="cars">
+<div class="cars" id="cars">
   <h1 class="text-center">Our cars</h1>
   <div class="container">
     <div class="row">
@@ -128,7 +134,7 @@
   </div>
 </div>
 
-<div class="tradeIn container">
+<div class="tradeIn container" id="tradeIn">
   <h1 class="text-center">Traid in</h1>
   <div class="row">
     <div class="col-12">
@@ -162,7 +168,7 @@
   </div>
 </div>
  
- <div class="produks">
+ <div class="produks" id="proucts">
   <div class="container">
     <h1 class="text-center">Our Produks</h1>
     <div class="row">
@@ -254,10 +260,11 @@
   </div>
  </div>
 
-<div class="team">
+<div class="team" id="team">
   <h1 class="text-center">Our managers</h1>
   <div class="container">
     <div class="row">
+
       <div class="col-12 col-sm-12 col-md-3 col-lg-3">
         <img src="https://for-male.ru/wp-content/uploads/2020/11/stilnyj-muzhchina.jpg" class="img-fluid">
         <div class="des text-center">
@@ -266,8 +273,58 @@
           <span>SEO</span>
         </div>
       </div>
+
+       <div class="col-12 col-sm-12 col-md-3 col-lg-3">
+        <img src="https://for-male.ru/wp-content/uploads/2020/11/stilnyj-muzhchina.jpg" class="img-fluid">
+        <div class="des text-center">
+        NIKOLAY SHEVCHENKO
+          <br>
+          <span>SEO</span>
+        </div>
+      </div>
+
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3">
+        <img src="https://for-male.ru/wp-content/uploads/2020/11/stilnyj-muzhchina.jpg" class="img-fluid">
+        <div class="des text-center">
+        NIKOLAY SHEVCHENKO
+          <br>
+          <span>SEO</span>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-3 col-lg-3">
+        <img src="https://for-male.ru/wp-content/uploads/2020/11/stilnyj-muzhchina.jpg" class="img-fluid">
+        <div class="des text-center">
+        NIKOLAY SHEVCHENKO
+          <br>
+          <span>SEO</span>
+        </div>
+      </div>
+
     </div>
   </div>
+</div>
+
+
+<div class="contact" id="contacs">
+  <div class="row">
+    <div class="container">
+    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+      <h1>Get in Touch</h1>
+    </div>
+    <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+      <div class="form-group">
+        <input type="text" class="form-control form-control-lg" placeholder="Your Name">
+      </div>
+       <div class="form-group">
+        <input type="email" class="form-control form-control-lg" placeholder="example@mail.com">
+    </div>
+     <div class="form-group">
+       <textarea class="form-control form-control-lg" placeholder="Put your feedback here!"></textarea>
+    </div>
+    <input type="submit" class="btn btn-outline-success btn-block btn-lg" value="Send">
+  </div>
+</div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -278,6 +335,15 @@
  $(document).ready(function(){
     $('.overlay').height($(window).height());
   })
+
+
+$(".navbar a").click(function(){
+$("body,html").animate({
+   scrollTop:$("#" + $(this).data('value'))
+   .offset().top},1000)
+})
+
+
 
 </script>
 </body>
